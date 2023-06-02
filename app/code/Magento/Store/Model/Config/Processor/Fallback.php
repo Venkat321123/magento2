@@ -211,7 +211,7 @@ class Fallback implements PostProcessorInterface
      */
     private function normalizeStoreData(): void
     {
-        foreach ($this->storeData as $key => $store) {
+        foreach ((array)$this->storeData as $key => $store) {
             $this->storeData[$key]['code'] = strtolower($store['code']);
         }
     }
